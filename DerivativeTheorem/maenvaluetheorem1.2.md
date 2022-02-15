@@ -311,10 +311,10 @@
       \nexists f^{'} (0)\\
     $$       
 
-    |$x$ |$(-\infty ,0)$|$0$|$(0,1)$|$(1,+\infty)$|
-    |:---:|:----:|:----:|:----:|:----:|
-    |$f^{'}(x)$|+|0|-|+|
-    |$f(x)$|increase|0|decrease|increase|
+    |    $x$     | $(-\infty ,0)$ |  $0$  | $(0,1)$  | $(1,+\infty)$ |
+    | :--------: | :------------: | :---: | :------: | :-----------: |
+    | $f^{'}(x)$ |       +        |   0   |    -     |       +       |
+    |   $f(x)$   |    increase    |   0   | decrease |   increase    |
 
 # Mathematical Models and the introduction of Taylor's Formula
 
@@ -491,3 +491,254 @@
     \cos x=1-\frac{x^{2} }{2!}+\frac{x^{4} }{4!}+\dots\\
     \lim = \frac{1}{12}
   $$ 
+
+## Use the Piano's Theorem getting the infinitesimal
+
+* $x\rightarrow 0,f(x)$ is the ?th order of $(x-x_0)$'s infinitesimal:
+  $$
+    \lim_{x\rightarrow 0}\frac{f(x)}{(x-_0)^{k}}=C\neq 0(k>0)\\
+    \Leftrightarrow f(x) \sim C(x-x_0)^{k}(x\rightarrow x_0) \\
+    \text{function is the }x\rightarrow x_0,(x-x_0)\text{ 's kth order infinitesimal}
+  $$ 
+* example: $x-\sin x,x\rightarrow 0$ is the $x$'s ? th order infinitesimal :
+  $$
+    \sin x=x-\frac{1}{3!}x^{3} +\frac{1}{5!}x^{5}+\mathrm{o}(x^{6} )\\
+    x-\sin x=-\frac{1}{3} x^{3}+\mathrm{o}(x^{3} )\\
+    x-\sin x\sim \frac{1}{6}x^{3},({\color{red}x\rightarrow 0})  
+  $$ 
+  so the $x-\sin x$is the third order of $x$ infinitesimal.
+  $$
+    \lim_{\rightarrow 0}\frac{x-\sin x}{x^{k} }=C\neq 0\\
+    \lim_{x\rightarrow 0}\frac{1-\cos x}{kx^{k-1} }=\lim_{x\rightarrow 0}\frac{\frac{1}{2}x^{2} }{kx^{k-1} }\overset{k-1=2,k=3}{=}\frac{1}{6}=C
+  $$ 
+
+# the curve's convexity and convacity and inflexion
+
+* applications: draw the image of a function$f(x),x\in D$the image of the $f(x)$
+* definition : if $f^{'} (x)$ is continuous , we define that the curve $y=f(x)$ is smooth **(first order smooth)**
+  
+  ![1.6](../1.6.svg)
+
+  this is a convexity function , the other kind is convacity function
+* i**Jensen's Inequality**:f every points of the curve's tangent line is beneath the function curve, the function curve is *convacity*, the other kind is convexity
+  $$
+    \forall x_1,x_2 \in I\\
+    \frac{f(x_1)+f(x_2)}{2}>f(\frac{x1+x_2}{2})
+  $$ 
+  or the form:
+  $$
+    \Leftrightarrow\\
+    x_1,x_2\in I\\
+    x\in (x_1,x_2),x=\lambda x_1+(1-\lambda )x_2,0<\lambda<1\\
+    \lambda f(x_1)+(1-\lambda)f(x_2)>f(\lambda x_1+(1-\lambda )x_2)
+  $$ 
+
+* **Theorem**: how to justice a curve's convexity and convacity? if $f(x)$ is second order derivable on the section $(a,b)$, $f^{''} (x)>0$,so the curve is convacity on the section, and if $f^{''}(x)<0$,the curve is convexity on the section.
+* proof: 
+  $$
+    \forall x_0\in (a,b),(x_0,f(x_0))\text{ on the curve}\\
+    \text{the tangent equation is: }y-f(x_0)=f^{'}(x_0) (x-x_0) ,y=f(x_0)+f^{'} (x _0)(x-x_0)\\
+    \forall x\in (a,b),f^{''}(x)>0,\forall x\in (a,b) ,x\neq x_0\\
+    f(x)=f(x_0)+f^{'}(_0)(x-x_0)+\frac{f^{''}(x_0) }{2!}(x-x_0) +R_{2}(x)\\
+    f(x)>f^{'}(x_0)(x-x_0) \Leftrightarrow f^{''}(x_0) >0\\
+    \text{the orther situation is in a simlar way}
+  $$ 
+* inflexion : if $f^{''}(x)=0,f^{'''}(x_0)\neq 0$,the $(x_0,f(x_0))$ will be the function's inflexion.
+* proof:
+  $$
+    f^{'''}(x_0) \neq 0, \text{may as well } f^{'''}(0)>0\\
+    \exists \delta >0,x\in \overset{\circ }{U}(x_0,\delta),\frac{f^{''}(x_0) }{x-x_0}>0\\
+    x\in(\delta,x_0),x-x_0<0 \Rightarrow f^{''}(x)<0\\
+    x\in (x_0,\delta ),x-x_0>0,\Rightarrow f^{''}(x)>0 
+  $$ 
+* steps:
+  1.  get the function's definition section.
+  2.  $f^{''}(x)=0$,the points where second order derivative inexists.
+  3.  make the list 
+
+## the function's image and asymptote
+
+* the definition of a function's asymptote: if points on the curve $P(x,f(x))$,the distance between the line and the curve's limitation is $0$ in the prossess of $x\rightarrow \infty$,the line $L$ is a *asymptote*
+
+_there is three classes loss_
+
+# indefinite integral
+
+actually,we want to know $F^{'}(x)=f(x)$,(f(x) is acknowledged),what is $F(x)$?
+$$
+  \Leftrightarrow f(x) \mathrm{d} x=F^{'}(x) \mathrm{d}x=\mathrm{d}F(x),F(x)? 
+$$ 
+
+* definition : $f(x)$ is defined on the section $I$,,if $\exists F(x),\forall x\in I,\Rightarrow F^{'} (x)=f(x)$, the $F(x)$ is the function $f(x)$'s *primitive functions*.the $F(x)$ is one of the function $f(x)$'s primitive functions,the  $F(x)+C$ is also a primitive function, $C$ is a constant number, $C\in \mathcal{R}$    
+* proof the primitive function must be $F(x)+C$:
+  $$
+    \forall G(x) \text{is a any primitive function on the section } I\\
+    \forall x \in I,G^{'}(x)=f(x)\\
+    [G(x)-F(x)]^{'}=G^{'}(x)-F^{'}(x)=f(x)-f(x)=0\\
+    \Rightarrow G(x)-F(x)=0,x\in I\\
+    G(x)=F(x)+C    
+  $$ 
+* theorem: i f$F(x)$ is one of the primitive functions of $f(x),x\in I$, the $F(x)+C$ is the all of primitive functions of $f(x)$ on the definition section.**Set of all the primitive functions of $f(x)$ is called $f(x)$'s indefinite integrel on the section $I$**,the symbol is :
+  $$
+    \int f(x)\mathrm{d}x\\
+    \int f(x) \mathrm{d}x =F(x)+C,x\in I,C \in \mathcal{R}
+  $$
+  > $C$!!!!!
+
+| $f(x)$        | $f(x)\mathrm{d}x$        | $x$                         | $\int$                         |
+| ------------- | ------------------------ | --------------------------- | ------------------------------ |
+| **integrand** | **integrand expression** | **veriable of integration** | **indefinite integral symbol** |
+## characters
+
+1. $(\int f(x) \mathrm{d}x)^{'} =\frac{\mathrm{d}}{\mathrm{d}x}\int f(x) \mathrm{d}x=f(x)$
+2. $\mathrm{d}\int f(x)\mathrm{d}x=f(x)\mathrm{d}x$  
+3. $\int f^{'} (x)\mathrm{d}x=\int \frac{\mathrm{d}}{\mathrm{d}x}f(x)\mathrm{d}x=f(x)+C$ 
+4. $\int \mathrm{d}f(x)=f(x)+C$
+   $$
+     \int g(0)\mathrm{d}x=\int \mathrm{d}G(x)=G(x)+C
+   $$ 
+
+## Geometrical  Significance
+
+* consume $F(x)$ is the primitive function of $f(x)$,$F(x)=\int f(x) \mathrm{d}x$, $\Rightarrow (\int f(x)\mathrm{d}x)^{'} =(F(x)+C)^{'} =f(x)$ 
+
+![1.7](../assets/1.7.svg)
+
+## Basic indedinite integral 
+
+1. $\int 0 \mathrm{d}x=C$
+2. $\int 1 \mathrm{d}x=\int \mathrm{d}x=x+C$
+3. $\int x^{a} \mathrm{d}x=\frac{1}{a+1}x^{a+1}+C,(\neq -1)$:
+   $$
+     (x^{a+1} )^{'}=(a+1)x^{a}\\
+     a\neq -1,\frac{1}{a+1}\\
+     (\frac{1}{a+1}x^{a+1} )^{'}=x^{a}    
+   $$
+4. $\int x^{-1} \mathrm{d}x=\int \frac{1}{x}\mathrm{d}x=\ln|x|+C$:warning!:$\ln x+C$'s definition section   is different from $\frac{1}{x}$!!!!
+5. $\int a^{x}\mathrm{d}x=\frac{a^{x} }{\ln a}+C$
+6. $\int e^{x}\mathrm{d}x=e^{x}+C$
+7. $\int \cos x\mathrm{d}x=\sin x+C$
+8. $\int \sin x\mathrm{d}x=\cos x+C$
+9. $\int \sec^{2}\mathrm{d}x=\tan x+C$
+10. $\int \csc^{2}x \mathrm{d}x=-\cot x+C$
+11. $\int \sec x\tan x \mathrm{d}x =\sec x+C$
+12. $\int \csc x\cot x\mathrm{d}x=-\csc x+C$ 
+13. $\int \frac{1}{1+x^{2} }$
+14. $\frac{1}{1+x^{2} }=\arctan x+C=-\arcctg x+C_1$
+15. $\int \frac{1}{\sqrt{1-x^{2} }}=\arcsin x+C=-\arccos x+C_1$
+16. $\int \ch x\mathrm{d}x=\sh x+C$
+17. $\int \sh x\mathrm{d}x=\ch x+C$   
+$$
+  \ch x=\frac{e^{x}+e^{-x}  }{2}\\
+  \sh x\frac{e^{x} -e^{-x} }{2}\\
+  \sh^{2}x-\sh ^{2} x=1 \\
+  (\sh x)^{'}=\ch x\\
+  (\ch x)^{'}=\sh x  
+$$ 
+
+## how to calculate a indefinite integral
+
+### elementary linear arithmetic of indefinite integral
+
+* if $\exists \int f(x)\mathrm{d}x,\int g(x)\mathrm{d}x$,$\forall \alpha,\beta$,($\alpha,\beta$ are not zero for the same time): 
+  $$
+    \int [\alpha f(x)+\beta g(x)]\mathrm{d}x=\alpha \int f(x)\mathrm{d}x+\beta \int g(x)\mathrm{d}x \exists
+  $$ 
+  proof:
+  $$
+    [\int [\alpha f(x)+\beta g(x)]\mathrm{d}x]^{'}=\alpha [\int f(x)\mathrm{d}x]^{'}+\beta [\int g(x)\mathrm{d}x]^{'}=\alpha f(x)+\beta g(x)   j
+  $$ 
+  the $C$ has been in the formula, but not apparent!
+* example:
+  1. $\int \sqrt{x\sqrt{x\sqrt{x}}}\mathrm{d}x$:
+     $$
+       \int x^{\frac{7}{8}}\mathrm{d}x=\frac{8}{15}x^{\frac{15}{8}}+{\color{green}  C}
+     $$  
+  2. $\int \tan x \mathrm{d}x$ :
+     $$
+       \int (\sec^{2}x-1) \mathrm{d}x =\int \sec ^{2}x \mathrm{d}x-\int 1 \mathrm{d}x=(\tan x+C_1)-(x+C_2)=\tan x-x+C
+     $$ 
+  3. $\int \frac{1}{\sin ^{2}x \cos ^{2}x }\mathrm{d}x$:
+     $$
+       \int \frac{\sin ^{2}x+\cos ^{2}x  }{\sin ^{2}x\cos ^{2}x  }\mathrm{d}x=\int (\sec^{2}x+\csc^{2}x  )\mathrm{d}x\\
+       =\tan x-\cot x+C
+     $$  
+  4. $\int \frac{x^{4} }{x^{2}+1 }$:
+     $$
+       \int \frac{x^{4}-1+1  }{x^{2}+1 }\mathrm{d}x=\int (x^{2}-1 +\frac{1}{x^{2}+1} )\mathrm{d}x=\frac{1}{3}x^{3}+\arctan x+C 
+     $$  
+
+## Minor differential of indefinite integral(**the first exchange method**)
+
+if $F^{'}(u)=f(u),\Rightarrow [F(\varphi(x))]^{'} =F^{'}(\varphi(x))\varphi^{'}(x)=f(\varphi(x))\varphi^{'}(x)$
+
+if we want to get $\int g(x),g(x)\mathrm{d}x=d?\Rightarrow \int g(x)\mathrm{d}x=?+C$ ,if $g(x)\mathrm{d}x=f(\varphi(x))\varphi^{'} (x)\mathrm{d}x\overset{\text{find the }F(u),F^{'}(u)=f(u) }{=}f(\varphi(x))\mathrm{d}\varphi(x)\overset{\varphi(x)=u}{=}f(u)\mathrm{d}u=\mathrm{d}F(u)=\mathrm{d}F(\varphi(x))$:
+$$
+  \int g(x)\mathrm{d}x=F(\varphi(x))+C\\
+  \int g(x) \mathrm{d}x=\int f(\varphi(x))\varphi^{'}(x)\mathrm{d}x= \int f(\varphi(x))\mathrm{d}\varphi(x)\overset{\varphi(x)=u }{=}\int f(u)\mathrm{d}u\overset{F^{'}(u)=f(u) }{=}F(u)+C=F(\varphi(x)) +C
+$$  
+
+* example:
+  1. $\int e^{2x}\mathrm{d}x$:
+     $$
+       \varphi(x)=2x,f(u)=e^{u},f(\varphi(x))=e^{2x}\\
+       \int e^{2x}(2x)^{'}\frac{1}{2}\mathrm{d}x=\frac{1}{2} \int e^{2x}(2x)^{'} \mathrm{d}x=\frac{1}{2}\int e^{2x}\mathrm{d}(2x)\\
+       \overset{2x=u}{=}\frac{1}{2}\int e^{u}\mathrm{d}u=\frac{1}{2}e^{u}+C=\frac{1}{2}e^{2x}+C          
+     $$
+
+$$
+  \int g(x)\mathrm{d}x=\int f(\varphi(x))\mathrm{d}\varphi(x)=F(\varphi(x))+C
+$$   
+
+* example: $\int \tan x\mathrm{d}x$:
+  $$
+    \int  \frac{\sin x}{\cos x}\mathrm{d}x=-\int \frac{1}{\cos x}\mathrm{d}(\cos x)=-\ln|\cos x|+C(\mathbf{\color{red}(17 th!)})
+  $$  
+* example:
+  $$
+    \int \cot \mathrm{d}x=\int \frac{\cos x}{\sin x}\mathrm{d}x=\int \frac{1}{\sin x}\mathrm{d}\sin x=\ln |\sin x|+C(\mathbf{\color{red}{18th!}})
+  $$ 
+* for get the minor differential,we should know some differential formula:
+    1. $\mathrm{d}x=1\mathrm{d}x=\mathrm{d}\frac{1}{a}(ax+b),(a\neq 0)$
+    2. $x\mathrm{d}x=\frac{1}{2}\mathrm{d}(x^{2 }\pm a^{2})$
+    3. $x\mathrm{d}x=-\frac{1}{2}\mathrm{d}(a^{2}-x^{2}  )$
+    4. $\cos x\mathrm{d}x=\mathrm{d}\sin x$
+    5. $\sin x\mathrm{d}x=-\mathrm{d}\cos x$
+    6. $\frac{1}{x}\mathrm{d}d=\mathrm{d}\ln |x|$ 
+    7. $e^{x}\mathrm{d}x=\mathrm{d}e^{x}$
+* example: $\int \frac{1}{a^{2} +x^{2} }\mathrm{d}x(a\neq 0)$ :
+  $$
+    =\frac{1}{a^{2} }\int \frac{1}{a^{2} +x^{2} }\mathrm{d}x=\frac{1}{a}\int \frac{1}{1+(\frac{1}{a})^{2} }\mathrm{d}x\\
+    =\frac{1}{a}\int \frac{1}{1+(\frac{x}{a})^{2} }\mathrm{d}(\frac{x}{a})\\
+    =\frac{1}{a}\arctan \frac{x}{a}+C(\mathbf{\color{red}19th!})
+  $$ 
+* example: $\int \frac{1}{\sqrt{a^{2} -x^{2} }}\mathrm{d}x(a>0)$:
+  $$
+    =\frac{1}{a}\int \frac{1}{\sqrt{1-(\frac{x}{a})^{2} }}\mathrm{d}x\\
+    =\int \frac{1}{\sqrt{1-(\frac{x}{a})^{2} }}\mathrm{d}(\frac{x}{a})\\
+    =\arcsin \frac{x}{a}+C(\mathbf{\color{red}20th!})
+  $$ 
+* example :  $\int \frac{1}{a^{2} -x^{2} }\mathrm{d}x(a\neq 0)$:
+  $$
+    =\int \frac{1}{(a-x)(a+x)}\mathrm{d}x\\
+    =\int (\frac{1}{a-x}-\frac{1}{a+x})\mathrm{d}x\\
+    =\frac{1}{a}[\int \frac{1}{a-x}\mathrm{d}x-\int \frac{1}{a+x}\mathrm{d}x]\\
+    =\frac{1}{2a}\ln|\frac{a-x}{a+x}|+C(\mathbf{\color{red}21th!})
+  $$  
+* example: $\int \sec x\mathrm{d}x$:
+  $$
+    =\int \frac{1}{\cos x}\mathrm{d}x=\int \frac{\cos x}{\cos ^{2} x}\mathrm{d}x=\int \frac{1}{1-\sin ^{2} x}\mathrm{d}\sin x=\\
+    \frac{1}{2}\ln |\frac{1+\sin x}{1-\sin x}|+C=\\
+    \frac{1}{2}\ln |\frac{(1+\sin x)^{2}}{\cos ^{2}x } |+C\\
+    \ln |\sec x+\tan x|+C(\mathbf{\color{red}22th!})\\
+    \text{the order method: }\\
+    \int \sec x\mathrm{d}x=\int \frac{\sec x(\sec x +\tan x)}{\sec x+\tan x}\mathrm{d}x\\
+    =\int \frac{1}{\sec x+\tan x }\mathrm{d}(\sec x+\tan x)=\ln |\sec x+\tan x|+C
+  $$ 
+* example: $\int \csc x\mathrm{d}x=\ln|\csc x-\cot x|+C(\mathbf{\color{red}{23th!}})$
+* $\int e^{ax}\mathrm{d}x=\frac{1}{a}e^{ax} +C(\mathbf{\color{red}{24th!}})$ 
+* $\int \cos ax \mathrm{d}x=\frac{1}{a}\sin ax+C(\mathbf{\color{red}{26th!}})$ 
+* $\int \sin ax \mathrm{d}x=-\frac{1}{a}\cos ax+C(\mathbf{\color{red}{27th!}})$
+
+## the second exchange method
+
