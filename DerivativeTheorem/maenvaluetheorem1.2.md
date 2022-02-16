@@ -742,3 +742,76 @@ $$
 
 ## the second exchange method
 
+if we want to get 
+
+$$
+  f(x)\mathrm{d}x\overset{x=\varphi(t),\text{is derivable}}{=}f(\varphi(t))\mathrm{d}(\varphi(t))=f(\varphi(t))\varphi^{'}(t)\mathrm{d}t\\
+  \overset{F^{'}(t)=f(\varphi(t))\varphi^{'}(t)  }{=}\mathrm{d}F(t)\overset{\text{if the }\varphi(t)\text{is monotonic},t=\varphi^{'}(x) }{=}\mathrm{d}F(\varphi^{-1}(x) ) \\
+  \int f(x)\mathrm{d}x=F(\varphi^{-1} (x))+C
+$$ 
+the practical steps:
+$$
+  \int f(x)\mathrm{d}\overset{x=\varphi(t)\text{is derivative and strictly monotonic}}{=}\int f(\varphi(t))\varphi^{'}(t)\mathrm{d}t\overset{F^{'}(t)=f(t)\varphi^{'}(t)  }{=}F(t)+C=F(\varphi^{'}(x) ) +C
+$$ 
+
+*  the applicating situations: if the formula has the following sqrts::
+  1. $\sqrt{a^{2}-x^{2}  },x=a\sin t,t\in [-\frac{\pi}{2,\frac{\pi}{2}}]$ 
+  2. $\sqrt{a^{2}+x^{2}  },x=a\tan t,t\in (-\frac{\pi}{2},\frac{\pi}{2})$ 
+  3. $\sqrt{x^{2} -a^{2} },x=a\sec t,t\in [0,\frac{\pi}{2})\cup (\frac{\pi}{2},\pi]$
+  4. $\sqrt[n]{\frac{ax+b}{cx+d}},\sqrt[n]{\frac{ax+b}{cx+d}}=t,\Rightarrow x=\varphi(t)$  
+* example:
+  $$
+    \overset{x=a\sin t}{=}\sqrt{a^{2} -a^{2} \sin ^{2} t}\cos t\mathrm{d}t=\\
+    a^{2} \int |\cos t|\cos t\mathrm{d}t=a^{2}\int \cos ^{2} t\mathrm{d}t=\frac{a^{2} }{2}\int (1+\cos 2t) \mathrm{d}t=\\
+    = \frac{a^{2} }{2}t+\frac{a^{2} }{4}\sin 2t +C=\\
+    =\frac{a^{2} }{2}\arcsin \frac{x}{a}+\frac{a^{2} }{2}\sin t\cos t+C=\frac{a^{2} }{2}\arcsin \frac{x}{a}+\frac{1}{2}\arcsin \frac{x}{a}+\frac{1}{2}x\sqrt{a^{2} -x^{2} }+C
+  $$ 
+  **we use the tangle principle to get the inverse function**:
+
+  ![1.8](../assets/1.8.svg)
+
+* example: $\int \frac{1}{\sqrt{x^{2} +aq^{2} }}\mathrm{d}x$ :
+  $$
+    x=a\tan t\\
+    =\int \frac{1}{\sqrt{a^{2} \tan ^{2}  t+a^{2}  }}\mathrm{d}t=\int \frac{\sec^{2} t}{\sec t}\mathrm{d}t=\\
+    \int \sec t\mathrm{d}t =\ln|\sec t+\tan t|+C=\ln |x+\sqrt{x^{2} +a^{2} }|-\ln |a|+C=\ln (x+\sqrt{x^{2}+a^{2}  })+C_1,(\mathbf{\color{red}27th!})
+  $$ 
+* example: $\int \frac{1}{\sqrt{x^{2} -a^{2} }}\mathrm{d}x=\ln |x+\sqrt{x^{2} -a^{2} }|+C(\mathbf{\color{red}28th!})$ 
+* $\int \frac{1}{\sqrt{x}+\sqrt[]3{x}}$ :
+  $$
+  \overset{\sqrt[6]{x}=t,x=t^{6}}{=}\int \frac{6t^{5} }{t^{3}+t^{2}  }\mathrm{d}t=\int \frac{t^{3} +1-1}{t+1}\mathrm{d}t=6\int (t^{2}-t+1-\frac{1}{t+1} )\mathrm{d}t=\\
+  \dots
+  $$ 
+
+## partial integral method
+
+introduction : $\int xe^{x} \mathrm{d}x$
+
+* theorem: if $u(x),v(x)$  is derivable, 
+  $$
+    \int u\mathrm{d}v=uv-\int v\mathrm{d}u
+  $$  
+  * proof: 
+    $$
+      (uv)^{'}=u^{'}v+uv^{'}   \\
+      \Rightarrow uv^{'}=(uv)^{'}-u^{'}v\\
+      \int uv^{'}\mathrm{d}x =\int [(uv)^{'}-u^{'}v  ]\mathrm{d}x  \\
+      \int  u\mathrm{d}v=\int (uv)^{'}\mathrm{d}x-\int u^{'}v\mathrm{d}x \\
+      \Rightarrow \int u\mathrm{d}v=uv-\int v\mathrm{d}u 
+    $$ 
+  * proof2:
+    $$
+      \mathrm{d}(uv)=u\mathrm{d}v+v\mathrm{d}u\\
+      \Rightarrow u\mathrm{d}v=\mathrm{d}(uv)-v\mathrm{d}u\\
+      \Rightarrow =\int u\mathrm{d}v=\int \mathrm{d}(uv)-v\mathrm{d}u\\
+      \int u\mathrm{d}v=\int \mathrm{d}(uv)-\int v\mathrm{d}u\\
+      \int u\mathrm{d}v=uv-\int v\mathrm{d}u
+    $$ 
+* method: $\int f(x)\mathrm{d}x=\int u(x)v^{'}(x)\mathrm{d}x=u(x)v(x)-\int v(x)u^{'}(x) \mathrm{d}x$,the $\int v(x)u^{'}(x) \mathrm{d}x\exists$, the integral exists.  
+* the steps:
+```mermaid
+graph LR;
+1[Linear method]-->2[Partial integral]-->3[Minor indifferential];
+2-->4[change variable method]
+```
+* 
