@@ -1,3 +1,9 @@
+---
+title: "The Document Title"
+author: [Example Author, Another Author]
+date: "2017-02-20"
+keywords: [Markdown, Example]
+...
 # Mean Value Theorem
 
 ## Rolle's theorem
@@ -193,7 +199,7 @@
     =\lim_{x\rightarrow \infty }[(1+\frac{1}{x})^{x}-e ]x\overset{\frac{1}{x}=t}{=}\lim_{t\rightarrow o^{+} }\frac{(1+t)^{\frac{1}{t}} -e}{t}=\lim_{t\rightarrow 0^{+} }\frac{e^{\frac{\ln(1+t)}{t}-e} }{t}\\
     =\lim_{t\rightarrow 0^{+} }e^{\frac{\ln(1+t)}{t}}\frac{\frac{1}{1+t}-\ln(1+t)}{t^{2} }=\lim_{t\rightarrow 0^{+} }\frac{t-(1+t)\ln(1+t)}{t^{2} }(\frac{0}{0})\\
     \overset{L'Hospital}{=}\lim_{t\rightarrow 0^{+} }\frac{-\ln(1+t)}{2t} =\frac{-e}{2}
-  $$  
+  $$
 
 # the applications of mean value theorem 
 
@@ -207,7 +213,7 @@
     F^{'}(\xi)=0\\
     \text{applicate Rolle's theorem for }F(x)\\
     \Rightarrow \exists \xi \in(a,b),F^{'}(\xi)=0\Leftrightarrow f(\xi)=0    
-  $$ 
+  $$
 
   * example: $a_1,a_2,\dots,a_n$ are all real numbers,proof $a_1\cos x+a_2\cos x+\dots +a_n\cos nx=0$, have a root on the section $(0,\pi)$
     $$
@@ -218,7 +224,7 @@
     F(0)=F(\pi)=0\\
     \text{ according to Rolle's theorem :} \exists \xi \in (0,\pi),\Rightarrow F^{'} (\xi)=0 ,\Rightarrow f(\xi )=0,\Rightarrow\\
     \text{the quation has a root on the section}
-    $$  
+    $$
 
 * proof:a formula with a $\xi$ (especially has a derivative with $\xi$) $\Leftrightarrow f^{'}(\xi)=0 $
   * example: the proof of largrange's theorem and cauchy's theorem
@@ -232,20 +238,20 @@
     \Rightarrow f(b)-f(a)=f^{'}(a+\theta (b-a))(b-a)(0<\theta<1) \\
     \Leftrightarrow     f(x_2)-f(x_1)=f^{'}(x_1+\theta (x_2-x_1))(x_2-x_1),(x1,x_2\in (a,b),x_1\neq x_2) \\
     \Leftrightarrow f(x_0+\Delta x)-f(x_0)=f^{'}(x_0+\theta \Delta x)\Delta x ,(\Delta x\neq 0) 
-  $$ 
+  $$
   * monotonic theorem's proof:
     $$
       f(x)\in C I,I\text{ is forall}\\
       f(x) \in D I\\
       x\in I ,f^{'}(x)\geq 0(>0),f(x) \text{ increases on } I \text{(strictly increases)},x\in I ,f^{'}(x)\leq 0(f^{'}(x)<0 ...),f^{'}(x)=0,f(x)=C  
-    $$ 
+    $$
     proof:
     $$
       \forall x_1,x_2 \in I,x_1<x_2\\
       \exists \xi (x-1,x_2),f(x_2)-f(x_1)\overset{largrange's theorem }{=}f(\xi)(x_2-x_2)\\
       f^{'}(\xi) \geq 0\Rightarrow f(x_2)-f(x_1)\geq 0\Rightarrow f(x_1)\leq f(x_2)\\
       \text{for the same step ,we can proof all the situation}
-    $$ 
+    $$
   
   * proof inequations 
     $$
@@ -254,7 +260,7 @@
       f(x)=\frac{\ln x}{x},x\in [a,b],f(x)\in C[a,b],\in D(a,b)\\
       f(b)-f(a)=f^{'}(x)(b-a),f^{'}(x)=\frac{1-\ln x }{x^{2} }<0\\
       f(b)<f(a)  
-    $$ 
+    $$
   * example:
     $$
       0<x<\frac{\pi }{2 },\tan x>x+\frac{x^{3} }{3}?\\
@@ -262,7 +268,7 @@
       f(x) \in C[0,\frac{\pi}{2}),\in D(0,\frac{\pi}{2})\\
       f(0)=0,f^{'}(x)=sec^{2}x -x-x^{2}=\tan ^{2}x-x^{2}  >0 ,f(x)-0=f^{'}    (x-0)>0\\
       f(x)>0
-    $$ 
+    $$
 
 ## justice the extremium
 
@@ -296,20 +302,20 @@
            \text{the third conditions:example:}\\
            f(x)=x^3,f^{'}(x)=3x^{2},f^{''}(x)=6x,f^{'}(0)=0,f^{''}(0)=0,f(0)\text{ is not a extreme point }
            $$
-           
+    
 3. get the monotonic section of a functionn
    1. get the function's definition section
    2. get the inner section's stationary points or underivatiable points.
    3. list the every sections.
    4. get every sections' monotonic character
    * example :
-    $$
+   $$
       f(x)\frac{2}{3}x-\sqrt[3]{x^{2} }\\
       \text{definition section is} \mathcal{R}\\
       f^{'}(x)\frac{2}{3}-\frac{2}{3}x^{\frac{-1}{3}} \\
       f^{'}(x)=0\Rightarrow   x=1\\
       \nexists f^{'} (0)\\
-    $$       
+   $$
 
     |    $x$     | $(-\infty ,0)$ |  $0$  | $(0,1)$  | $(1,+\infty)$ |
     | :--------: | :------------: | :---: | :------: | :-----------: |
@@ -327,7 +333,7 @@
 * from the largrange theorem : if the function on the section $[a,b]$ satisfies the Largrange's conditions ,the $f(b)-f(a)=f^{'}(x\xi)(b-a)\Rightarrow f(b)=f(a)+f^{'}(\xi)(b-a) ,b=x,a=x_0,x\neq x_0,\Rightarrow f(x)=f(x_0)+f^{'} (\xi)(x-x_0)$
   $$
     f(x)=f(x_0)+f^{'}(\xi)(x-x_0) 
-  $$ 
+  $$
   $f(x)$ use the $f(x_0)$ be the approximation ,the error is $f^{'}(x_0)(x-x_0) $
   if the function has the second order derivative :
   $$
@@ -335,7 +341,7 @@
     \text{consume the approximation :}f(x)=f(x_0)+f^{'}(x-x_0)+k(x-x_0)^{2}   \\
     f(x)-[f(x_0)+f^{'}(x-x_0) ]=k(x-x_0)^{2}\\
     k=\frac{f(x)-[f(x_0)+f^{'}(x-x_0)   ]}{(x-x_0)^{2} }
-  $$ 
+  $$
   the problem is what is the error $k$?
 * proof of $K$:
   $$
@@ -346,27 +352,27 @@
     G(x)=2(x-x_0)  ,G^{''}(x)= 2!,G(x_0)=0,G^{''} (x_0)=0\\
     k=\frac{F(x)-F(x_0)}{G(x)-G(x_0)}\overset{\text{Cauchy's theorem}}{=}=\frac{F^{'} (\xi_1)}{G^{'}(\xi_1) }(\text{may as well }x_0<x,x_0<\xi_1<x)=\frac{F^{'}(\xi_1)-F^{'}(x_0)  }{G^{'}(\xi_1)-G^{'}(x_0)  }=\frac{F^{''}(\xi_2 ) }{G^{''}(\xi_2) }=\frac{f^{''}(\xi ) }{2!} \\
     f(x)=f(x_0)+f^{' }(x_0) (x-x_0)+\frac{f^{''}(\xi) }{2!}(x-x_0)^{2} 
-  $$ 
+  $$
   we guess if the third order derivative exists ,$f(x)=f(x_0)+f^{'}(x-x_0)+\frac{f^{''} (x_0)}{2!}(x-x_0)^{2}+\frac{f^{'''}(\xi) }{3!}(x-x_0 ) ^{3}  $
 
 * **Taylor 's Formula**:if $f^{n}(x)\in CI$,$\exists f^{(n+1)}(x) ,x\in I$ ,$x_0\in I,\forall x\in I,x\neq x_0$:
   $$
     f(x)=f(x_0)+f^{'}(x_0)(x-x_0) +\frac{f^{''}(x_0)}{2!}(x-x_0)^{2} +\dots +\frac{f^{(n)}}{n!}  (x_0)(x-x_0)^{n} + \frac{f^{(n+1)} }{(n+1)!}(\xi)(x-x_0)^{n+1} ,\xi\in(x_0,x)
-  $$ 
+  $$
   this is called  $f(x)$ 's Taylor formula on the point $x$
   $$
     f(x_0)+f^{'}(x_0) (x-x_0)+\frac{f^{''}(x_0) }{2!}(x-x_0)+\dots \frac{f^{(n)} (x_0)}{n!}(x-x_0)^{n}\overset{\Delta }{=}P_n (x)
-  $$ 
+  $$
   this is called nth order Taylor series 
   $$
     \frac{f^{(n+1)(\xi)} }{(n+1)!}(x-x_0)^{n+1}\overset{\Delta}{=}R_{n}(x) 
-  $$ 
+  $$
   this is called the Taylor's *largrange remainder*.
 
 * Other form of the formula : $\xi \in (x_0,x),0<\theta<1$:
   $$
     R_{n}(x)=\frac{f^{(n+1)}(x_0+\theta(x-x_0)  )}{(n+1)!}(x-x_0)^{n+1}  
-  $$ 
+  $$
   thiis is called Cauchy's remainder.
   if :
   $$
@@ -380,11 +386,11 @@
 * especially : $0\in I,x_0=0$:
   $$
     f(x)=f(0)+f^{'}(0)x+\frac{f^{''}(x) }{2!} x^{2}+\dots+\frac{f^{(n)} (x)}{n!}x^{n}+\frac{f^{(n+1)} (\xi)  }{(n+1)!}x^{n+1}  
-  $$ 
+  $$
   this is called $f(x)$ on the point $x=x_0$ 's **Maclaurin's Formula**
   $$
     R_n(x)=\frac{f^{(n+1)}(\xi) }{(n+1)!}x^{n+1} 
-  $$ 
+  $$
   this is the **Maclaurin 's remainder**
 
 ## Some basic functions' Maclaurin's expansion
@@ -394,7 +400,7 @@
     \forall x\in R, f^{(n+1)} (x)\exists\\
     f^{(n)} (x)=e^{x},n=0,1,2,\dots \\
     e^{x}=1+ x + \frac{1}{2!}x^{2} +\dots +\frac{1}{n!}x^{n} +\frac{e^{\xi} }{(n+1)!} x^{n+1},\xi\in (a,x) ,x\in (-\infty,\infty)
-  $$ 
+  $$
 
 * $f(x)=\sin x$
   $$
@@ -404,33 +410,33 @@
     \text{2n terms is all }0,n=2m+1\\
     \sin x= 0- \frac  {1 }{3!}x^{3}+\frac{1}{5!}x^{5} -\frac{1}{7!}x^{7} \dots+\frac{(-1)^{m} }{(2m+1)!}x^{2m+1}  + R_+{2k+1}(x)\\
     R_{k+1}=\frac{f^{(2k+1)}(\xi) }{(2k+2)!}x^{2k+1}=\frac{\sin[\xi+(2k+2)\frac{\pi }{2}]}{(2k+2)!}x^{2k+2},\xi \in (0,x),x\in (-\infty,\infty)  
-  $$ 
+  $$
   ****
   **we can first get the $n$ order terms ,and use the n order term to get the every terms**
   ****
   or:
   $$
     \sin x=x-\frac{x^{3} }{3!}+\frac{x^{5} }{5!}-\frac{x^{7} }{7!}+\dots+\frac{(-1)^{k} }{(2k+1)!}x^{2k+1}+0\times x^{2k+2}+R_{2k+2}(x)  
-  $$ 
+  $$
 
 * $\cos x$:
   $$
     \cos x=1-\frac{x^{2} }{2!}+ \frac{x^{4} }{4!}-\frac{x^{6} }{6!}+\dots +\frac{(-1)^{k} }{(2k)!}+R_{2k}(x),x\in (-\infty,\infty)
-  $$  
+  $$
 
 * $f(x)=\ln(1+x)$
   $$
     1+x>0,x>-1,f^{(n+1)} (x)\exists,f^{(n)}(-1)^{n-1}(1+x)^{-n}\\
     f^{(n)} (0)=(-1)^{n-1}(n-1)!,n=1,2,3,\dots\\
     \ln(1+x)=x-\frac{x^{2} }{2}+\frac{x^{3} }{3}-\frac{x^{4} }{4}+\dots+\frac{(-1)^{(n-1)} }{n}x^{n} +R_n(x),x\in(-1,\infty)
-  $$ 
+  $$
 
 * $(1+x)^{a}$
   $$
     x\in(-1,\infty),f^{(n)}(x)= a(a-1)(a-n+1)(1+a)^{a-n} ,n=0,1,2,\dots\\
     f^{(n)} =a(a-1)\dots(a-n+1)\\
     (1+x)^{a}=1+1+ax+\frac{a(a-1)}{2!}x^{2}+\dots+\frac{a(a-1)\dots(a-n+1)}{n!}x^{n}+R_{n}(x),x\in(-1,\infty)
-  $$ 
+  $$
 
 ## the applications of Taylor's Formula
 
@@ -444,7 +450,7 @@
       \lim_{x\rightarrow 0}\frac{f(x)}{x},1\Rightarrow \lim_{x\rightarrow 0}x=0,\Rightarrow \lim_{x\rightarrow 0}f(x)=0=f(0)\\
       \lim_{x\rightarrow 0}\frac{f(x)}{x}=\lim_{x\rightarrow 0}\frac{f(x)-0}{x-0}=1\Rightarrow f^{'}(x)=0\\
       f(x)=f(0)+f^{'}(0)x +\frac{f^{''}(\xi ) }{2!}x^{2}=x+\frac{f^{''} (\xi)}{2!} x^{2}\geq x
-    $$  
+    $$
   
 * **A Theorem**: if $\lim_{x\rightarrow 0}\frac{f(x)}{g(x)}=C$,$C$ is a constant,$\lim_{x\rightarrow 0}g(x)=0\Rightarrow \lim_{x\rightarrow 0}f(x)=0$
 
@@ -454,7 +460,7 @@
        f(x)=f(b)+f^{'}(b)(x-b)+\frac{f^{(2)}(b) }{2!}(x-b)^{2}+\dots +\frac{f^{(n-1)}(b) }{(n-1)!}(x-b)^{n-1}+\frac{f^{(n)} }{n!}(x-b)^{n}=\frac{f^{n}(\xi) }{n!}(x-b)^{n},x<\xi<b\\
        0=f(a)=\frac{f^{(n)} }{n!}(a-b)^{n}\\
        \Rightarrow f^{n}(\xi)=0        
-     $$   
+     $$
 
 ## The Taylor's Formula with Piano-remainder term
 
@@ -463,12 +469,12 @@
     \text{if } |f^{n}(x) |\leq M,n=0,1,2,\dots\\
     \text{so :} \lim_{x\rightarrow x_0}\frac{f^{(n+1)}(\xi) }{(n+1)!}(x-x_0)=M\times (\text{infinitesimal})=0\\
     \Rightarrow R_{n}(x)=o([(x-x_0)]^{n} )(x\rightarrow x_0)
-  $$  
+  $$
 
 * Piano's Theorem: if $f(x)$ 's nth order derivative exists on the $x_0$:
   $$
     f(x)=f(x_0)+f^{'}(x_0)(x-x_0)+\frac{f^{(2)} (x_0)}{2!} +\dots +\frac{f^{(n)}(x_0) }{n!}(x-x_0)^{n}+o([x-x_0]^{n} ) ,(x\rightarrow x_0)
-  $$ 
+  $$
   proof: *proof of Piano's theorem*
   especially $x_0=0$,the formula is Maclaurin's Fomula with a Piano-remainder term
 
@@ -482,7 +488,7 @@
 * $f(x) =0+0x+\dots+0x^{k-1}+o(x^{k} )\sim Ax^{k},(x\rightarrow 0)$,$g(x)=Bx^{m}+o(x^{m} )\sim Bx^{m} ,(x\rightarrow 0),B\neq 0$
   $$
     \lim_{x\rightarrow 0}\frac{f(x)}{g(x)}=\lim_{x\rightarrow 0}\frac{Ax^{k} }{Bx^{m} }=\left\{\begin{array}{ll}0& k>M\\\frac{A}{B}& k=m\\\infty&k<m\end{array}\right.
-  $$ 
+  $$
 * $\lim_{x\rightarrow x_0}\frac{f(x)}{g(x)},(\frac{0}{0})\overset{x-x_0=t}{=}\lim_{t\rightarrow 0}\frac{f(x_0+t)}{g(x_0+t)}(\frac{0}{0})$
 * example:$\lim_{x\rightarrow 0}\frac{e^{-\frac{x^{2} }{2} } -\cos x}{x^{4} }$ :
   $$
@@ -490,7 +496,7 @@
     e^{-\frac{x^{2} }{2}}  =1-\frac{x^{2} }{x}+\frac{x^{4} }{8}+\dots \\
     \cos x=1-\frac{x^{2} }{2!}+\frac{x^{4} }{4!}+\dots\\
     \lim = \frac{1}{12}
-  $$ 
+  $$
 
 ## Use the Piano's Theorem getting the infinitesimal
 
@@ -499,18 +505,18 @@
     \lim_{x\rightarrow 0}\frac{f(x)}{(x-_0)^{k}}=C\neq 0(k>0)\\
     \Leftrightarrow f(x) \sim C(x-x_0)^{k}(x\rightarrow x_0) \\
     \text{function is the }x\rightarrow x_0,(x-x_0)\text{ 's kth order infinitesimal}
-  $$ 
+  $$
 * example: $x-\sin x,x\rightarrow 0$ is the $x$'s ? th order infinitesimal :
   $$
     \sin x=x-\frac{1}{3!}x^{3} +\frac{1}{5!}x^{5}+\mathrm{o}(x^{6} )\\
     x-\sin x=-\frac{1}{3} x^{3}+\mathrm{o}(x^{3} )\\
     x-\sin x\sim \frac{1}{6}x^{3},({\color{red}x\rightarrow 0})  
-  $$ 
+  $$
   so the $x-\sin x$is the third order of $x$ infinitesimal.
   $$
     \lim_{\rightarrow 0}\frac{x-\sin x}{x^{k} }=C\neq 0\\
     \lim_{x\rightarrow 0}\frac{1-\cos x}{kx^{k-1} }=\lim_{x\rightarrow 0}\frac{\frac{1}{2}x^{2} }{kx^{k-1} }\overset{k-1=2,k=3}{=}\frac{1}{6}=C
-  $$ 
+  $$
 
 # the curve's convexity and convacity and inflexion
 
@@ -524,14 +530,14 @@
   $$
     \forall x_1,x_2 \in I\\
     \frac{f(x_1)+f(x_2)}{2}>f(\frac{x1+x_2}{2})
-  $$ 
+  $$
   or the form:
   $$
     \Leftrightarrow\\
     x_1,x_2\in I\\
     x\in (x_1,x_2),x=\lambda x_1+(1-\lambda )x_2,0<\lambda<1\\
     \lambda f(x_1)+(1-\lambda)f(x_2)>f(\lambda x_1+(1-\lambda )x_2)
-  $$ 
+  $$
 
 * **Theorem**: how to justice a curve's convexity and convacity? if $f(x)$ is second order derivable on the section $(a,b)$, $f^{''} (x)>0$,so the curve is convacity on the section, and if $f^{''}(x)<0$,the curve is convexity on the section.
 * proof: 
@@ -542,7 +548,7 @@
     f(x)=f(x_0)+f^{'}(_0)(x-x_0)+\frac{f^{''}(x_0) }{2!}(x-x_0) +R_{2}(x)\\
     f(x)>f^{'}(x_0)(x-x_0) \Leftrightarrow f^{''}(x_0) >0\\
     \text{the orther situation is in a simlar way}
-  $$ 
+  $$
 * inflexion : if $f^{''}(x)=0,f^{'''}(x_0)\neq 0$,the $(x_0,f(x_0))$ will be the function's inflexion.
 * proof:
   $$
@@ -550,7 +556,7 @@
     \exists \delta >0,x\in \overset{\circ }{U}(x_0,\delta),\frac{f^{''}(x_0) }{x-x_0}>0\\
     x\in(\delta,x_0),x-x_0<0 \Rightarrow f^{''}(x)<0\\
     x\in (x_0,\delta ),x-x_0>0,\Rightarrow f^{''}(x)>0 
-  $$ 
+  $$
 * steps:
   1.  get the function's definition section.
   2.  $f^{''}(x)=0$,the points where second order derivative inexists.
@@ -567,7 +573,7 @@ _there is three classes loss_
 actually,we want to know $F^{'}(x)=f(x)$,(f(x) is acknowledged),what is $F(x)$?
 $$
   \Leftrightarrow f(x) \mathrm{d} x=F^{'}(x) \mathrm{d}x=\mathrm{d}F(x),F(x)? 
-$$ 
+$$
 
 * definition : $f(x)$ is defined on the section $I$,,if $\exists F(x),\forall x\in I,\Rightarrow F^{'} (x)=f(x)$, the $F(x)$ is the function $f(x)$'s *primitive functions*.the $F(x)$ is one of the function $f(x)$'s primitive functions,the  $F(x)+C$ is also a primitive function, $C$ is a constant number, $C\in \mathcal{R}$    
 * proof the primitive function must be $F(x)+C$:
@@ -577,7 +583,7 @@ $$
     [G(x)-F(x)]^{'}=G^{'}(x)-F^{'}(x)=f(x)-f(x)=0\\
     \Rightarrow G(x)-F(x)=0,x\in I\\
     G(x)=F(x)+C    
-  $$ 
+  $$
 * theorem: i f$F(x)$ is one of the primitive functions of $f(x),x\in I$, the $F(x)+C$ is the all of primitive functions of $f(x)$ on the definition section.**Set of all the primitive functions of $f(x)$ is called $f(x)$'s indefinite integrel on the section $I$**,the symbol is :
   $$
     \int f(x)\mathrm{d}x\\
@@ -596,7 +602,7 @@ $$
 4. $\int \mathrm{d}f(x)=f(x)+C$
    $$
      \int g(0)\mathrm{d}x=\int \mathrm{d}G(x)=G(x)+C
-   $$ 
+   $$
 
 ## Geometrical  Significance
 
@@ -610,9 +616,9 @@ $$
 2. $\int 1 \mathrm{d}x=\int \mathrm{d}x=x+C$
 3. $\int x^{a} \mathrm{d}x=\frac{1}{a+1}x^{a+1}+C,(\neq -1)$:
    $$
-     (x^{a+1} )^{'}=(a+1)x^{a}\\
+   (x^{a+1} )^{'}=(a+1)x^{a}\\
      a\neq -1,\frac{1}{a+1}\\
-     (\frac{1}{a+1}x^{a+1} )^{'}=x^{a}    
+     (\frac{1}{a+1}x^{a+1} )^{'}=x^{a}
    $$
 4. $\int x^{-1} \mathrm{d}x=\int \frac{1}{x}\mathrm{d}x=\ln|x|+C$:warning!:$\ln x+C$'s definition section   is different from $\frac{1}{x}$!!!!
 5. $\int a^{x}\mathrm{d}x=\frac{a^{x} }{\ln a}+C$
@@ -629,12 +635,12 @@ $$
 16. $\int \ch x\mathrm{d}x=\sh x+C$
 17. $\int \sh x\mathrm{d}x=\ch x+C$   
 $$
-  \ch x=\frac{e^{x}+e^{-x}  }{2}\\
+\ch x=\frac{e^{x}+e^{-x}  }{2}\\
   \sh x\frac{e^{x} -e^{-x} }{2}\\
   \sh^{2}x-\sh ^{2} x=1 \\
   (\sh x)^{'}=\ch x\\
-  (\ch x)^{'}=\sh x  
-$$ 
+  (\ch x)^{'}=\sh x
+$$
 
 ## how to calculate a indefinite integral
 
@@ -643,30 +649,30 @@ $$
 * if $\exists \int f(x)\mathrm{d}x,\int g(x)\mathrm{d}x$,$\forall \alpha,\beta$,($\alpha,\beta$ are not zero for the same time): 
   $$
     \int [\alpha f(x)+\beta g(x)]\mathrm{d}x=\alpha \int f(x)\mathrm{d}x+\beta \int g(x)\mathrm{d}x \exists
-  $$ 
+  $$
   proof:
   $$
     [\int [\alpha f(x)+\beta g(x)]\mathrm{d}x]^{'}=\alpha [\int f(x)\mathrm{d}x]^{'}+\beta [\int g(x)\mathrm{d}x]^{'}=\alpha f(x)+\beta g(x)   j
-  $$ 
+  $$
   the $C$ has been in the formula, but not apparent!
 * example:
   1. $\int \sqrt{x\sqrt{x\sqrt{x}}}\mathrm{d}x$:
      $$
        \int x^{\frac{7}{8}}\mathrm{d}x=\frac{8}{15}x^{\frac{15}{8}}+{\color{green}  C}
-     $$  
+     $$
   2. $\int \tan x \mathrm{d}x$ :
      $$
        \int (\sec^{2}x-1) \mathrm{d}x =\int \sec ^{2}x \mathrm{d}x-\int 1 \mathrm{d}x=(\tan x+C_1)-(x+C_2)=\tan x-x+C
-     $$ 
+     $$
   3. $\int \frac{1}{\sin ^{2}x \cos ^{2}x }\mathrm{d}x$:
      $$
        \int \frac{\sin ^{2}x+\cos ^{2}x  }{\sin ^{2}x\cos ^{2}x  }\mathrm{d}x=\int (\sec^{2}x+\csc^{2}x  )\mathrm{d}x\\
        =\tan x-\cot x+C
-     $$  
+     $$
   4. $\int \frac{x^{4} }{x^{2}+1 }$:
      $$
        \int \frac{x^{4}-1+1  }{x^{2}+1 }\mathrm{d}x=\int (x^{2}-1 +\frac{1}{x^{2}+1} )\mathrm{d}x=\frac{1}{3}x^{3}+\arctan x+C 
-     $$  
+     $$
 
 ## Minor differential of indefinite integral(**the first exchange method**)
 
@@ -676,7 +682,7 @@ if we want to get $\int g(x),g(x)\mathrm{d}x=d?\Rightarrow \int g(x)\mathrm{d}x=
 $$
   \int g(x)\mathrm{d}x=F(\varphi(x))+C\\
   \int g(x) \mathrm{d}x=\int f(\varphi(x))\varphi^{'}(x)\mathrm{d}x= \int f(\varphi(x))\mathrm{d}\varphi(x)\overset{\varphi(x)=u }{=}\int f(u)\mathrm{d}u\overset{F^{'}(u)=f(u) }{=}F(u)+C=F(\varphi(x)) +C
-$$  
+$$
 
 * example:
   1. $\int e^{2x}\mathrm{d}x$:
@@ -688,16 +694,16 @@ $$
 
 $$
   \int g(x)\mathrm{d}x=\int f(\varphi(x))\mathrm{d}\varphi(x)=F(\varphi(x))+C
-$$   
+$$
 
 * example: $\int \tan x\mathrm{d}x$:
   $$
     \int  \frac{\sin x}{\cos x}\mathrm{d}x=-\int \frac{1}{\cos x}\mathrm{d}(\cos x)=-\ln|\cos x|+C(\mathbf{\color{red}(17 th!)})
-  $$  
+  $$
 * example:
   $$
     \int \cot \mathrm{d}x=\int \frac{\cos x}{\sin x}\mathrm{d}x=\int \frac{1}{\sin x}\mathrm{d}\sin x=\ln |\sin x|+C(\mathbf{\color{red}{18th!}})
-  $$ 
+  $$
 * for get the minor differential,we should know some differential formula:
     1. $\mathrm{d}x=1\mathrm{d}x=\mathrm{d}\frac{1}{a}(ax+b),(a\neq 0)$
     2. $x\mathrm{d}x=\frac{1}{2}\mathrm{d}(x^{2 }\pm a^{2})$
@@ -711,20 +717,20 @@ $$
     =\frac{1}{a^{2} }\int \frac{1}{a^{2} +x^{2} }\mathrm{d}x=\frac{1}{a}\int \frac{1}{1+(\frac{1}{a})^{2} }\mathrm{d}x\\
     =\frac{1}{a}\int \frac{1}{1+(\frac{x}{a})^{2} }\mathrm{d}(\frac{x}{a})\\
     =\frac{1}{a}\arctan \frac{x}{a}+C(\mathbf{\color{red}19th!})
-  $$ 
+  $$
 * example: $\int \frac{1}{\sqrt{a^{2} -x^{2} }}\mathrm{d}x(a>0)$:
   $$
     =\frac{1}{a}\int \frac{1}{\sqrt{1-(\frac{x}{a})^{2} }}\mathrm{d}x\\
     =\int \frac{1}{\sqrt{1-(\frac{x}{a})^{2} }}\mathrm{d}(\frac{x}{a})\\
     =\arcsin \frac{x}{a}+C(\mathbf{\color{red}20th!})
-  $$ 
+  $$
 * example :  $\int \frac{1}{a^{2} -x^{2} }\mathrm{d}x(a\neq 0)$:
   $$
     =\int \frac{1}{(a-x)(a+x)}\mathrm{d}x\\
     =\int (\frac{1}{a-x}-\frac{1}{a+x})\mathrm{d}x\\
     =\frac{1}{a}[\int \frac{1}{a-x}\mathrm{d}x-\int \frac{1}{a+x}\mathrm{d}x]\\
     =\frac{1}{2a}\ln|\frac{a-x}{a+x}|+C(\mathbf{\color{red}21th!})
-  $$  
+  $$
 * example: $\int \sec x\mathrm{d}x$:
   $$
     =\int \frac{1}{\cos x}\mathrm{d}x=\int \frac{\cos x}{\cos ^{2} x}\mathrm{d}x=\int \frac{1}{1-\sin ^{2} x}\mathrm{d}\sin x=\\
@@ -734,7 +740,7 @@ $$
     \text{the order method: }\\
     \int \sec x\mathrm{d}x=\int \frac{\sec x(\sec x +\tan x)}{\sec x+\tan x}\mathrm{d}x\\
     =\int \frac{1}{\sec x+\tan x }\mathrm{d}(\sec x+\tan x)=\ln |\sec x+\tan x|+C
-  $$ 
+  $$
 * example: $\int \csc x\mathrm{d}x=\ln|\csc x-\cot x|+C(\mathbf{\color{red}{23th!}})$
 * $\int e^{ax}\mathrm{d}x=\frac{1}{a}e^{ax} +C(\mathbf{\color{red}{24th!}})$ 
 * $\int \cos ax \mathrm{d}x=\frac{1}{a}\sin ax+C(\mathbf{\color{red}{26th!}})$ 
@@ -748,11 +754,11 @@ $$
   f(x)\mathrm{d}x\overset{x=\varphi(t),\text{is derivable}}{=}f(\varphi(t))\mathrm{d}(\varphi(t))=f(\varphi(t))\varphi^{'}(t)\mathrm{d}t\\
   \overset{F^{'}(t)=f(\varphi(t))\varphi^{'}(t)  }{=}\mathrm{d}F(t)\overset{\text{if the }\varphi(t)\text{is monotonic},t=\varphi^{'}(x) }{=}\mathrm{d}F(\varphi^{-1}(x) ) \\
   \int f(x)\mathrm{d}x=F(\varphi^{-1} (x))+C
-$$ 
+$$
 the practical steps:
 $$
   \int f(x)\mathrm{d}\overset{x=\varphi(t)\text{is derivative and strictly monotonic}}{=}\int f(\varphi(t))\varphi^{'}(t)\mathrm{d}t\overset{F^{'}(t)=f(t)\varphi^{'}(t)  }{=}F(t)+C=F(\varphi^{'}(x) ) +C
-$$ 
+$$
 
 *  the applicating situations: if the formula has the following sqrts::
   1. $\sqrt{a^{2}-x^{2}  },x=a\sin t,t\in [-\frac{\pi}{2,\frac{\pi}{2}}]$ 
@@ -765,7 +771,7 @@ $$
     a^{2} \int |\cos t|\cos t\mathrm{d}t=a^{2}\int \cos ^{2} t\mathrm{d}t=\frac{a^{2} }{2}\int (1+\cos 2t) \mathrm{d}t=\\
     = \frac{a^{2} }{2}t+\frac{a^{2} }{4}\sin 2t +C=\\
     =\frac{a^{2} }{2}\arcsin \frac{x}{a}+\frac{a^{2} }{2}\sin t\cos t+C=\frac{a^{2} }{2}\arcsin \frac{x}{a}+\frac{1}{2}\arcsin \frac{x}{a}+\frac{1}{2}x\sqrt{a^{2} -x^{2} }+C
-  $$ 
+  $$
   **we use the tangle principle to get the inverse function**:
 
   ![1.8](../assets/1.8.svg)
@@ -775,13 +781,13 @@ $$
     x=a\tan t\\
     =\int \frac{1}{\sqrt{a^{2} \tan ^{2}  t+a^{2}  }}\mathrm{d}t=\int \frac{\sec^{2} t}{\sec t}\mathrm{d}t=\\
     \int \sec t\mathrm{d}t =\ln|\sec t+\tan t|+C=\ln |x+\sqrt{x^{2} +a^{2} }|-\ln |a|+C=\ln (x+\sqrt{x^{2}+a^{2}  })+C_1,(\mathbf{\color{red}27th!})
-  $$ 
+  $$
 * example: $\int \frac{1}{\sqrt{x^{2} -a^{2} }}\mathrm{d}x=\ln |x+\sqrt{x^{2} -a^{2} }|+C(\mathbf{\color{red}28th!})$ 
 * $\int \frac{1}{\sqrt{x}+\sqrt[]3{x}}$ :
   $$
   \overset{\sqrt[6]{x}=t,x=t^{6}}{=}\int \frac{6t^{5} }{t^{3}+t^{2}  }\mathrm{d}t=\int \frac{t^{3} +1-1}{t+1}\mathrm{d}t=6\int (t^{2}-t+1-\frac{1}{t+1} )\mathrm{d}t=\\
   \dots
-  $$ 
+  $$
 
 ## partial integral method
 
@@ -790,7 +796,7 @@ introduction : $\int xe^{x} \mathrm{d}x$
 * theorem: if $u(x),v(x)$  is derivable, 
   $$
     \int u\mathrm{d}v=uv-\int v\mathrm{d}u
-  $$  
+  $$
   * proof: 
     $$
       (uv)^{'}=u^{'}v+uv^{'}   \\
@@ -798,7 +804,7 @@ introduction : $\int xe^{x} \mathrm{d}x$
       \int uv^{'}\mathrm{d}x =\int [(uv)^{'}-u^{'}v  ]\mathrm{d}x  \\
       \int  u\mathrm{d}v=\int (uv)^{'}\mathrm{d}x-\int u^{'}v\mathrm{d}x \\
       \Rightarrow \int u\mathrm{d}v=uv-\int v\mathrm{d}u 
-    $$ 
+    $$
   * proof2:
     $$
       \mathrm{d}(uv)=u\mathrm{d}v+v\mathrm{d}u\\
@@ -806,7 +812,7 @@ introduction : $\int xe^{x} \mathrm{d}x$
       \Rightarrow =\int u\mathrm{d}v=\int \mathrm{d}(uv)-v\mathrm{d}u\\
       \int u\mathrm{d}v=\int \mathrm{d}(uv)-\int v\mathrm{d}u\\
       \int u\mathrm{d}v=uv-\int v\mathrm{d}u
-    $$ 
+    $$
 * method: $\int f(x)\mathrm{d}x=\int u(x)v^{'}(x)\mathrm{d}x=u(x)v(x)-\int v(x)u^{'}(x) \mathrm{d}x$,the $\int v(x)u^{'}(x) \mathrm{d}x\exists$, the integral exists.  
 * the steps:
 ```mermaid
@@ -814,4 +820,6 @@ graph LR;
 1[Linear method]-->2[Partial integral]-->3[Minor indifferential];
 2-->4[change variable method]
 ```
-* 
+* the detailed practical methods:
+  1. $P_{k}(x)e^{ax}$ is the series formula for variate $x$ adn $a\neq 0$
+     1. $\int P_{k}(x)e^{ax}\mathrm{d}x$:Partial method
