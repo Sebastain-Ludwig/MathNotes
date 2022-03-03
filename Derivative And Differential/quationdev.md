@@ -1,6 +1,3 @@
----
-marp: true
----
 
 # A equation function's derivative function
 

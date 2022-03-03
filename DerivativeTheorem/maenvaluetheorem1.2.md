@@ -1,9 +1,3 @@
----
-title: "The Document Title"
-author: [Example Author, Another Author]
-date: "2017-02-20"
-keywords: [Markdown, Example]
-...
 # Mean Value Theorem
 
 ## Rolle's theorem
@@ -822,4 +816,105 @@ graph LR;
 ```
 * the detailed practical methods:
   1. $P_{k}(x)e^{ax}$ is the series formula for variate $x$ adn $a\neq 0$
-     1. $\int P_{k}(x)e^{ax}\mathrm{d}x$:Partial method
+     1. $\int P_{k}(x)e^{ax}\mathrm{d}x$:Partial method:
+        $$
+          \int P_{k}(x) \mathrm{d}(\frac{1}{a}e^{ax} )
+        $$
+        it needs $k$th indefinite integral
+     2. $\int P_{k}(x)\cos ax\mathrm{d}x$:
+        $$
+          \int P_{k}(x)\mathrm{d}(\frac{1}{a}\sin ax)
+        $$
+     3. $\int P_{k}(x)\sin ax\mathrm{d}x$ :
+        $$
+          \int P_{k}(x)\sin ax\mathrm{d}x=\int P_{k}(x)\mathrm{d}(\frac{-1}{a}\cos ax)
+        $$
+  2. $P(x)$ is the function of the variable $x$:
+     1. $\int P(x)f(\arcsin x)\mathrm{d}x$ the minor inferential is the best. if we canont we should make $f(\arcsin x)=u,P(x)=v^{'}$,get the $v$
+     2. $\int P(x)f(\ln x)\mathrm{d}x$   
+* exmaple: $\int (1+x^{2})\cos 2x\mathrm{d}x$:
+  $$
+    =\int (1+x^{2} )\mathrm{d}\frac{1}{2}\sin 2x\\
+    =\frac{1}{2}(1+x^{2} )\sin 2x-\frac{1}{2}\int \sin 2x\mathrm{d}(1+x^{2})\\
+    =\frac{1}{2}(1+x^{2} )\sin 2x-\frac{1}{2}\int 2x\sin 2x \mathrm{d}x\\
+    =\frac{1}{2}(1+x^{2} )\sin 2x+\frac{1}{2}(\int x\mathrm{d}\cos 2x)\\
+    =\frac{1}{2}(1+x^{2} )\sin 2x-\frac{1}{2}(x\cos 2x-\int \cos 2x\mathrm{d}x)\\
+    =\frac{1}{2}+\frac{1}{2}x^{2}\sin 2x+\frac{1}{2}x\cos 2x-\frac{1}{4}\sin 2x+C 
+  $$
+* example: $\int \frac{\arctan x}{1+x^{2} }$ :
+  $$
+    =\int \arctan x\mathrm{d}\arctan x=\\
+    \frac{1}{2}(\arctan x)^{2} +C
+  $$
+* $\int \arctan x\mathrm{d}x$ :
+  $$
+    =x\arctan x -\int x\mathrm{d}\arctan x\\
+    =x\arctan x- \int x \frac{1}{1+x^{2} }\mathrm{d}x\\
+    =x\arctan x-\frac{1}{2}\ln|1+x^{2} |+C=x\arctan x-\frac{1}{2}\ln (1+x^{2} )+C
+  $$
+* $\int \frac{\arctan x}{x^{2} (1+x^{2} )}\mathrm{d}x$ :
+  $$
+    =\int \frac{\arctan x}{x^{2} }-\frac{\arctan x}{(1+x^{2} )}\mathrm{d}x\\
+    = -\frac{1}{2}(\arctan x x)^{2} +\int \arctan x\mathrm{d}(\frac{-1}{x })\\
+    =-\frac{1}{2}(\arctan x)^{2}+[-\frac{1}{2}\arctan x+\int \frac{1}{x}\frac{1}{1+x^{2} }\mathrm{d} x]\\
+    = -\frac{1}{2}(\arctan x)^{2}-\frac{1}{2}\arctan x+\ln |x|-\frac{1}{2}\ln(1+x^{2})+C\\
+    (\int \frac{1}{x}\frac{1}{1+x^{2} }\mathrm{d} x=\int (\frac{1}{x}-\frac{x}{1+x^{2} })\mathrm{d}x)
+  $$
+* $\int \ln^{2}x/x \mathrm{d}x$ 
+* $\int \sqrt{x}\ln x\mathrm{d}x$:
+  $$
+    =\int \ln x\mathrm{d}(\frac{2}{3}x^{\frac{3}{2}} )\\
+    =\frac{2}{3}x^{\frac{3}{2}} \ln x-\frac{2}{}3\int x^{\frac{3}{2}} \frac{1}{x}\mathrm{d}x\\
+    =\frac{2}{3}\ln x-\frac{4}{9}x^{\frac{3}{2}}+C 
+  $$
+* $\int e^{ax} \cos bx \mathrm{d}x,(a\neq 0,b\neq 0,constant)$
+  $$
+    =\int  \cos bx \mathrm{d}(\frac{1}{a}e^{ax} )=\frac{1}{a}e^{ax} \cos bx +\frac{b}{a}\int e^{ax} \sin bx \mathrm{d}x\\
+    =\frac{1}{a}e^{ax} \cos bx +\frac{b}{a}[\frac{1}{a}e^{ax} \cos bx -\frac{b}{a}\int e^{ax} \cos bx \mathrm{d}x]\\
+    \text{consume the }I=\int e^{ax} cosbx \mathrm{d}x\\
+    a^{2}I=ae^{ax} \cos bx+be^{ax} \sin bx-\frac{b^{2} }{a^{2} }I\\
+    a^{2}I=ae^{ax} \cos bx +b e^{ax} \sin bx -b^{2} I  \\
+    I=\frac{e^{ax} }{a^{2} +b^{2} }[a\cos bx+b\sin bx]+C
+  $$
+* $\int e^{ax} \sin bx \mathrm{d}x$
+* $\int \sqrt{a^{2} -x^{2} }\mathrm{d}x$:
+  $$
+    =\sqrt{a^{2} -x^{2}} x-\int x\mathrm{d}\sqrt{a^{2} -x^{2} }\\
+    =x\sqrt{a^{2} -x^{2} }-\int x\frac{-2x}{2\sqrt{a^{2} -x^{2} }}\mathrm{d}x\\
+    =x\sqrt{a^{2} -x^{2} }-\int \frac{a^{} 2-x^{2} -a^{2} }{\sqrt{a^{2} -x^{2} }}\mathrm{d}x\\
+    =x\sqrt{a^{2} -x^{2} }-\int \sqrt{a^{2} -x^{2} }\mathrm{d}x+a^{2} 2\arcsin\frac{x}{a}\\
+    I=\int \sqrt{a^{2} -x^{2} }\mathrm{d}x
+  $$
+
+## Rational functions' ,tangle functions' retional style and irrational functions' indefinite integral *
+
+### rational functions' indefinite integral
+
+* definition: $P_{n}(x),Q_{m}(x)$ is polynomial, $\frac{P_n(x)}{Q_m(x)}$  is a rational function.
+  * $n\geq m$ rational false fraction
+  * $n<m$ rational true fraction
+* the rational false function must can be a add of polynomial and a rational true fraction.
+* the polynomials' division:$\frac{x^{4} +3x^{2} +x+1}{x^{2} +x+1}$ :
+  $$
+    \overset{x^{2}-x-3 }{\sqrt[x^{2}+x+1 ]{\begin{array}{l} {x^{4} +0\cdot x^{3}+3x^{3}+1} \\x^{4} +x^{3} +x^{2} -x\\ \hline{3+2x^{2}+x } \\-x^{3} -x-x\\ \hline \dots\end{array} }}\\
+    =x^{2} -x+3+\frac{-x-2}{x^{2} +x+1}
+  $$
+* the breakdown of rational fractions: $\frac{x^{2} -x+5}{(x-1)(x-2)^{2}(x^{2} -x+1 )(x^{2}+x +1)^{2}  }$
+  (**the rational fraction muust can be broken down by any of first order and second order fractions!(proof\*)**) 
+  $$
+    =\frac{A}{x-1}+\frac{B}{x-2}+\frac{C}{(x-2)^{2} }+\frac{D}{(x-2)^{3} }+\frac{Ex+F}{x^{2} -x+1}+\frac{Gx+H}{x^{2} +x+1}+\frac{Ix+J}{(x^{2}+x+1)^{2} }
+  $$
+  **Undetermined coefficient method and Residue Theorem** ,we can get the coefficient of every terms.
+* basic kinds of the rational fractions' integral:
+  * the first kind of simplest fraction's integral:$\int \frac{A}{(a-x)^{n} }\mathrm{d}x$
+    $$
+      n=1,\int =A\int \frac{1}{x-a}\mathrm{d}(x-a)=A\ln |x-a|+C\\
+      n>1 \int =A\int (a-x)^{-n}\mathrm{d}(x-a)=\frac{A}{1-n}\frac{1}{(x-a)^{n-1} } +C
+    $$
+  * the second kind of simplest fraction's integral: $\int \frac{Ax+B}{(x^{2}+px+q )^{n} }\mathrm{d}x$ 
+    * $I_{n}=\int \frac{1}{x^{2} +a^{2} }\mathrm{d}x,x\in N,a\neq 0,constant$
+    **have a break**
+
+  # Definite integral
+
+* introduction
